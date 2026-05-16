@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: gplx-backend
+  datasource:
+    url: jdbc:postgresql://localhost:5432/gplx
+    username: gplx
+    password: gplx123
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+server:
+  port: 8080

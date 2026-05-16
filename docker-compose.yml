@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  postgres:
+    image: postgres:16
+    container_name: gplx-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: gplx
+      POSTGRES_USER: gplx
+      POSTGRES_PASSWORD: gplx123
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+volumes:
+  pg_data:
